@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Metadata } from "next"
 import CancerTOC from "./CancerTOC"
+import CancerVideoPlayer from "./CancerVideoPlayer"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, BookOpen, BrainCircuit, Search, Microscope, Users, GraduationCap, Presentation } from "lucide-react"
@@ -39,10 +40,10 @@ export default function CancerTextbookPage() {
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
               <div className="flex flex-col justify-center space-y-8">
                 <div className="space-y-4">
-                  <Badge variant="outline" className="text-teal-800 dark:text-teal-300 border-teal-700/40 dark:border-teal-400/40 bg-teal-500/10 mb-2 py-1 px-3">
+                  <Badge variant="outline" className="text-primary dark:text-primary border-primary/40 dark:border-primary/40 bg-primary/10 mb-2 py-1 px-3">
                     Medhavy Presents
                   </Badge>
-                  <h1 id="hero-heading" className="text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl/none text-teal-800 dark:text-teal-300">
+                  <h1 id="hero-heading" className="text-4xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl/none text-primary dark:text-primary">
                     Cancer Biology and Therapeutics
                   </h1>
                   <p className="text-xl font-medium text-foreground dark:text-foreground/95">
@@ -69,7 +70,7 @@ export default function CancerTextbookPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="#why-medhavy"
-                    className="inline-flex h-12 items-center justify-center rounded-md bg-teal-700 dark:bg-teal-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-teal-800 dark:hover:bg-teal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    className="inline-flex h-12 items-center justify-center rounded-md bg-primary dark:bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90 dark:hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   >
                     Explore Features
                   </Link>
@@ -84,7 +85,7 @@ export default function CancerTextbookPage() {
 
               <div className="mx-auto flex w-full max-w-[500px] items-center justify-center lg:max-w-none">
                 <div className="relative group rounded-xl overflow-hidden border border-foreground/10 shadow-2xl bg-black">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-fuchsia-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none mix-blend-overlay" aria-hidden="true"></div>
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-destructive/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none mix-blend-overlay" aria-hidden="true"></div>
                   <Image
                     src="/images/cancer-cover.png"
                     alt="Cancer Biology and Therapeutics Textbook Cover — featuring a detailed illustration of the tumor microenvironment with labeled T-cells, ECM, and invasion pathways"
@@ -158,6 +159,9 @@ export default function CancerTextbookPage() {
           </div>
         </section>
 
+        {/* Video Tutorial Section */}
+        <CancerVideoPlayer />
+
         {/* TOC Overview Section */}
         <section aria-labelledby="thematic-heading" className="py-20 md:py-32">
           <div className="container mx-auto px-4 md:px-6">
@@ -195,7 +199,7 @@ export default function CancerTextbookPage() {
 
               {/* Featured Chapter Preview */}
               <div className="flex-1 w-full relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/10 to-fuchsia-500/10 rounded-2xl -m-4 blur-xl" aria-hidden="true"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-destructive/10 rounded-2xl -m-4 blur-xl" aria-hidden="true"></div>
                 <Card className="relative overflow-hidden border-foreground/10 bg-background/80 backdrop-blur shadow-2xl">
                   <CardHeader className="bg-muted/50 border-b pb-4">
                     <Badge variant="outline" className="w-fit mb-2">Featured Preview</Badge>
